@@ -68,7 +68,7 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  spec.ios.deployment_target = "15.0"
+  spec.ios.deployment_target = "1.0"
   spec.osx.deployment_target = "15.0"
   spec.watchos.deployment_target = "11.0"
   spec.tvos.deployment_target = "18.0"
@@ -135,5 +135,6 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency "swiftui-math", "~> 0.0.1"
+  spec.dependency "swift-concurrency-extras", "~> 0.0.1"
 
 end
