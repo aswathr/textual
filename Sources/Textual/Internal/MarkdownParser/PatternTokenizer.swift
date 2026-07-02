@@ -12,6 +12,7 @@ import Foundation
 // This tokenizer is intentionally conservative: patterns are opt-in and processing is linear. If
 // no patterns are provided, the input is returned as a single `.text` token.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct PatternTokenizer {
   private let patterns: [Pattern]
 
@@ -73,6 +74,7 @@ struct PatternTokenizer {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PatternTokenizer {
   struct Pattern {
     let regex: Regex<(Substring, Substring)>
@@ -80,6 +82,7 @@ extension PatternTokenizer {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PatternTokenizer.Pattern {
   static var emoji: Self {
     .init(regex: /:([a-zA-Z0-9_+-]+):/, tokenType: .emoji)
@@ -94,6 +97,7 @@ extension PatternTokenizer.Pattern {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PatternTokenizer {
   struct Token: Hashable, Sendable {
     let type: TokenType
@@ -102,6 +106,7 @@ extension PatternTokenizer {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PatternTokenizer {
   struct TokenType: Hashable, RawRepresentable, Sendable, ExpressibleByStringLiteral {
     public let rawValue: String
@@ -116,6 +121,7 @@ extension PatternTokenizer {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PatternTokenizer.TokenType {
   static let text: Self = "text"
   static let emoji: Self = "emoji"

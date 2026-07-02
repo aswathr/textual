@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Applies a font leading setting.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct FontLeadingProperty: TextProperty {
   private let leading: Font.Leading
 
@@ -15,6 +16,7 @@ public struct FontLeadingProperty: TextProperty {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension TextProperty where Self == FontLeadingProperty {
   /// Applies the given leading setting to the font.
   public static func fontLeading(_ leading: Font.Leading) -> Self {

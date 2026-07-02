@@ -1,5 +1,6 @@
 import Foundation
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributedStringProtocol {
   var isMathBlock: Bool {
     let attachments = self.attachments()
@@ -60,12 +61,14 @@ extension AttributedStringProtocol {
 // over structural blocks (paragraphs, list items, table cells) without reconstructing the
 // entire block tree.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributedStringProtocol {
   func blockRuns(parent: PresentationIntent.IntentType? = nil) -> AttributedString.BlockRuns {
     AttributedString.BlockRuns(attributedString: self, parent: parent)
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributedString {
   struct BlockRuns: RandomAccessCollection {
     struct BlockRun: Sendable {
@@ -132,6 +135,7 @@ extension AttributedString {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PresentationIntent {
   fileprivate func intent(
     before intent: PresentationIntent.IntentType?
@@ -153,8 +157,10 @@ extension PresentationIntent {
 
 // MARK: - NSAttributedString
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension NSAttributedString.Key: TextualCompatible {}
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension TextualNamespace where Base == NSAttributedString.Key {
   static var attachment: Base {
     .init(AttributeScopes.TextualAttributes.AttachmentAttribute.name)

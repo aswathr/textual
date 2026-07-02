@@ -2,6 +2,7 @@ import SwiftUI
 private import SwiftUIMath
 
 /// Properties that control how Textual renders math expressions.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct MathProperties: Sendable, Hashable {
   public struct FontName: Hashable, Sendable, RawRepresentable, ExpressibleByStringLiteral {
     public let rawValue: String
@@ -35,6 +36,7 @@ public struct MathProperties: Sendable, Hashable {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension MathProperties.FontName {
   public static let latinModern: Self = .init(rawValue: Math.Font.Name.latinModern.rawValue)
   public static let kpMathLight: Self = .init(rawValue: Math.Font.Name.kpMathLight.rawValue)
@@ -50,6 +52,7 @@ extension MathProperties.FontName {
   public static let leteSans: Self = .init(rawValue: Math.Font.Name.leteSans.rawValue)
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   @Entry var mathProperties = MathProperties()
 }

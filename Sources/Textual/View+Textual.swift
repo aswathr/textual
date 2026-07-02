@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension View {
   /// Provides access to Textual-specific modifiers.
   ///
@@ -14,6 +15,7 @@ extension View {
   @inlinable public var textual: TextualNamespace<Self> { .init(self) }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension TextualNamespace where Base: View {
   /// Sets the spacing above and below the current block.
   @MainActor public func blockSpacing(_ blockSpacing: StructuredText.BlockSpacing) -> some View {

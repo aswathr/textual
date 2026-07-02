@@ -6,7 +6,7 @@ let package = Package(
   name: "textual",
   platforms: [
     .macOS(.v15),
-    .iOS(.v18),
+    .iOS(.v15),
     .tvOS(.v18),
     .watchOS(.v11),
     .visionOS(.v2),
@@ -17,7 +17,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-concurrency-extras", from: "1.3.1"),
     .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.18.7"),
-    .package(url: "https://github.com/gonzalezreal/swiftui-math", from: "0.1.0"),
+    .package(url: "https://github.com/aswathr/swiftui-math", from: "0.1.0"),
   ],
   targets: [
     .target(

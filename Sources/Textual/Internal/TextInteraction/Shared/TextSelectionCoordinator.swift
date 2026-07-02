@@ -13,6 +13,7 @@ import SwiftUI
 // local and non-scrollable regions.
 
 #if TEXTUAL_ENABLE_TEXT_SELECTION
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   @Observable
   final class TextSelectionCoordinator {
     private var models: [WeakBox<TextSelectionModel>] = []
@@ -38,6 +39,7 @@ import SwiftUI
   }
 #endif
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct TextSelectionCoordination: ViewModifier {
   #if TEXTUAL_ENABLE_TEXT_SELECTION
     @State private var coordinator = TextSelectionCoordinator()

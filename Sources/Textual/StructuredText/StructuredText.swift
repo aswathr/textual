@@ -101,6 +101,7 @@ import SwiftUI
 ///
 /// When you need to parse something other than Markdown, use ``init(_:parser:)`` with a custom
 /// ``MarkupParser`` implementation.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct StructuredText: View {
   @State private var attributedString = AttributedString()
 
@@ -134,6 +135,7 @@ public struct StructuredText: View {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// Creates a structured-text view from a Markdown string.
   ///
@@ -170,6 +172,7 @@ extension StructuredText {
 
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview(traits: .fixedLayout(width: 400, height: 600)) {
   @Previewable @State var width: CGFloat = 200
 
@@ -209,6 +212,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview("Custom Emoji") {
   let emoji: Set<Emoji> = [
     Emoji(shortcode: "dog", url: URL(string: "https://picsum.photos/id/237/32/32")!),

@@ -1,6 +1,7 @@
 #if TEXTUAL_ENABLE_TEXT_SELECTION
   import Foundation
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension TextLayoutCollection {
     func indexPathsForRunSlices(in range: TextRange) -> some Sequence<IndexPath> {
       IndexPathSequence(
@@ -11,6 +12,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension TextLayoutCollection {
     fileprivate func indexPathForRunSlice(after indexPath: IndexPath) -> IndexPath? {
       let layout = layouts[indexPath.layout]

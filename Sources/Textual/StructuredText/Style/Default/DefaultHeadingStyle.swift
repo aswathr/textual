@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// The default heading style used by ``StructuredText/DefaultStyle``.
   public struct DefaultHeadingStyle: HeadingStyle {
@@ -20,6 +21,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.HeadingStyle where Self == StructuredText.DefaultHeadingStyle {
   /// The default heading style.
   public static var `default`: Self {
@@ -29,6 +31,7 @@ extension StructuredText.HeadingStyle where Self == StructuredText.DefaultHeadin
 
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview {
   StructuredText(
     markdown: """

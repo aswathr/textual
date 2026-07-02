@@ -94,6 +94,7 @@ import SwiftUI
 /// InlineText(markdown: "Use `git status` to check **uncommitted** changes")
 ///   .textual.inlineStyle(style)
 /// ```
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct InlineText: View {
   @State private var attributedString = AttributedString()
 
@@ -124,6 +125,7 @@ public struct InlineText: View {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension InlineText {
   /// Creates inline text from a markdown string.
   ///
@@ -155,6 +157,7 @@ extension InlineText {
 
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview("Custom Emoji") {
   ScrollView {
     InlineText(

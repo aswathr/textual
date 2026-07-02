@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension DynamicColor {
   static let gitHubPrimary = DynamicColor(
     light: Color(red: 6 / 255, green: 6 / 255, blue: 6 / 255),

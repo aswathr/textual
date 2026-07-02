@@ -1,5 +1,6 @@
 import Foundation
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element: AnyObject {
   func removingIdenticalDuplicates() -> Self {
     var identifiers: Set<ObjectIdentifier> = []
@@ -17,6 +18,7 @@ extension Array where Element: AnyObject {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == NSAttributedString {
   // Joins attributed strings and tracks the character offset where each original string begins
   // in the joined result. The offsets map allows converting ranges in the original strings to

@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   // NB: Enables environment resolution in `ListItemStyle`
   struct ResolvedListItemStyle<S: ListItemStyle>: View {
@@ -17,6 +18,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.ListItemStyle {
   @MainActor func resolve(configuration: Configuration) -> some View {
     StructuredText.ResolvedListItemStyle(self, configuration: configuration)

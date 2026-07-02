@@ -17,6 +17,7 @@ import SwiftUI
 ///   highContrastDark: .white
 /// )
 /// ```
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct DynamicColor: Hashable, Sendable {
   private struct Variant: Hashable, Sendable {
     private let colorScheme: ColorScheme?
@@ -60,6 +61,7 @@ public struct DynamicColor: Hashable, Sendable {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension DynamicColor {
   /// Creates a dynamic color with a single variant.
   public init(_ any: Color) {
@@ -102,6 +104,7 @@ extension DynamicColor {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension DynamicColor: ShapeStyle {
   public func resolve(in environment: EnvironmentValues) -> some ShapeStyle {
     bestMatch(

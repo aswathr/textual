@@ -20,6 +20,7 @@ import SwiftUI
 /// `InlineStyle()` creates a baseline style. By default, Textual uses ``InlineStyle/default`` in
 /// the environment, which applies a slightly smaller monospaced font for code, semibold for
 /// strong, and a link color that adapts to the current color scheme.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct InlineStyle: Sendable, Hashable {
   var code: AnyTextProperty = AnyTextProperty(.monospaced)
   var emphasis: AnyTextProperty = AnyTextProperty(.italic)
@@ -77,6 +78,7 @@ public struct InlineStyle: Sendable, Hashable {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   @usableFromInline
   @Entry var inlineStyle: InlineStyle = .default

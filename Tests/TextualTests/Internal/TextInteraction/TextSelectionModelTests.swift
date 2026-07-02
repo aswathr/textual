@@ -7,6 +7,7 @@
 
   struct TextSelectionModelTests {
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func urlForPoint() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -26,6 +27,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func empty() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "empty")
@@ -38,6 +40,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func nonEmpty() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -50,6 +53,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func startPosition() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -66,6 +70,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func endPosition() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -82,6 +87,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func attributedTextCollapsedRange() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -95,6 +101,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func attributedTextTwoParagraphs() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -117,6 +124,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func positionFromOffsetZero() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -129,6 +137,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func positionFromOffsetOutOfRange() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -142,6 +151,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func positionFromOffset() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -159,6 +169,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func offsetSamePosition() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -171,6 +182,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func offset() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -183,6 +195,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func offsetBackwards() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -199,6 +212,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func firstRectCollapsedRange() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -212,6 +226,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func firstRect() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -232,6 +247,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func caretRectDownstream() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -245,6 +261,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func caretRectUpstream() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -262,6 +279,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func caretRectDownstreamRightToLeft() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -279,6 +297,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func caretRectUpstreamRightToLeft() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -296,6 +315,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func selectionRectsCollapsedRange() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -309,6 +329,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func selectionRectsSingleLine() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -336,6 +357,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func selectionRectsMultipleLines() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -381,6 +403,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func closestPositionOnEmptyModel() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "empty")
@@ -393,6 +416,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func closestPositionWithinFirstRun() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -410,6 +434,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func closestPositionWithinLinkRun() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -427,6 +452,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func closestPositionSecondLine() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -444,6 +470,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func closestPositionNextLayout() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -461,6 +488,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func closestPositionClampsBeforeStart() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -474,6 +502,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func closestPositionWithinRange() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -497,6 +526,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func closestPositionBeforeRange() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -520,6 +550,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func closestPositionAfterRange() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -543,6 +574,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func characterRangeEmptyModel() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "empty")
@@ -555,6 +587,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func characterRange() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -578,6 +611,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func blockRange() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -604,6 +638,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func blockStartFromMiddle() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -624,6 +659,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func blockStartFromStart() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -644,6 +680,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func blockStartFromVeryStart() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -661,6 +698,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func blockEndFromMiddle() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -682,6 +720,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func blockEndFromEnd() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -702,6 +741,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func blockEndFromVeryEnd() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -720,6 +760,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func isPositionAtBlockBoundaryAtStart() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -736,6 +777,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func isPositionAtBlockBoundaryAtEnd() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -752,6 +794,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func isPositionAtBlockBoundaryInMiddle() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -768,6 +811,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func positionAboveSameLayout() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -787,6 +831,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func positionAboveAcrossLayouts() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -806,6 +851,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func positionAboveFromFirstLine() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -823,6 +869,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func positionBelowSameLayout() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -842,6 +889,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func positionBelowAcrossLayouts() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -861,6 +909,7 @@
     }
 
     @Test
+    @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
     func positionBelowFromLastLine() throws {
       // given
       let model = try TextSelectionModel(fixtureName: "two-paragraphs-bidi")
@@ -894,6 +943,7 @@
     #endif
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension TextSelectionRect {
     var integral: Self {
       TextSelectionRect(

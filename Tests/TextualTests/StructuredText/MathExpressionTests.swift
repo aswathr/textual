@@ -5,12 +5,15 @@
 
   import Textual
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension StructuredText {
     @MainActor
     struct MathExpressionTests {
       private let layout = SwiftUISnapshotLayout.device(config: .iPhone8)
 
-      @Test func inlineAndBlockMath() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  inlineAndBlockMath() {
         let view = StructuredText(
           markdown: """
             Inline math feels natural: $E = mc^2$.
@@ -29,7 +32,9 @@
         assertSnapshot(of: view, as: .textualImage(layout: layout))
       }
 
-      @Test func mathBlockAlignment() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  mathBlockAlignment() {
         let view = StructuredText(
           markdown: """
             Leading paragraph for context.

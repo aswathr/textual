@@ -40,6 +40,7 @@ import SwiftUI
 /// .textual.imageAttachmentLoader(.image(named: \.lastPathComponent))
 /// .textual.emojiAttachmentLoader(.emoji(named: \.lastPathComponent))
 /// ```
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public protocol AttachmentLoader: Sendable {
   associatedtype Attachment: Textual.Attachment
 
@@ -56,6 +57,7 @@ public protocol AttachmentLoader: Sendable {
   ) async throws -> Attachment
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   @Entry var imageAttachmentLoader: any AttachmentLoader = .image()
   @Entry var emojiAttachmentLoader: any AttachmentLoader = .emoji()

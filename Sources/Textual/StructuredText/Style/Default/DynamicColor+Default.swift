@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension DynamicColor {
   static let grid = DynamicColor(
     light: Color(red: 210 / 255, green: 210 / 255, blue: 215 / 255),

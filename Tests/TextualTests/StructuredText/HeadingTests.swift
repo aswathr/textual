@@ -5,12 +5,15 @@
 
   import Textual
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension StructuredText {
     @MainActor
     struct HeadingTests {
       private let layout = SwiftUISnapshotLayout.device(config: .iPhone8)
 
-      @Test func defaultStyle() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  defaultStyle() {
         let view = StructuredText(
           markdown: """
             # Heading 1
@@ -32,7 +35,9 @@
         assertSnapshot(of: view, as: .textualImage(layout: layout))
       }
 
-      @Test func inlines() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  inlines() {
         let view = StructuredText(
           markdown: """
             # Put some *emphasis* to it

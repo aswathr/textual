@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributeScopes {
   /// Attributes used by Textual when parsing and rendering markup.
   public struct TextualAttributes: AttributeScope {
@@ -33,6 +34,7 @@ extension AttributeScopes {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributeDynamicLookup {
   /// Provides dynamic member lookup for Textual attributes.
   public subscript<T: AttributedStringKey>(

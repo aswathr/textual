@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A table style inspired by GitHub’s rendering.
   public struct GitHubTableStyle: TableStyle {
@@ -38,6 +39,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.TableLayout {
   fileprivate var evenRowBounds: [CGRect] {
     rowIndices
@@ -47,6 +49,7 @@ extension StructuredText.TableLayout {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.TableStyle where Self == StructuredText.GitHubTableStyle {
   /// A GitHub-like table style.
   public static var gitHub: Self {
@@ -54,6 +57,7 @@ extension StructuredText.TableStyle where Self == StructuredText.GitHubTableStyl
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 #Preview {
   StructuredText(
     markdown: """

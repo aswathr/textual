@@ -12,6 +12,7 @@
   // respects `exclusionRects` so embedded scrollable regions can continue to handle gestures.
   // Selection UI is provided by `UITextInteraction` configured for non-editable content.
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   final class UITextInteractionView: UIView {
     override var canBecomeFirstResponder: Bool {
       true
@@ -145,6 +146,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension UITextInteractionView: UITextInteractionDelegate {
     func interactionShouldBegin(_ interaction: UITextInteraction, at point: CGPoint) -> Bool {
       logger.debug("interactionShouldBegin(at: \(point.logDescription)) -> true")
@@ -161,6 +163,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension Logger.Textual.Category {
     fileprivate static let textInteraction = Self(rawValue: "textInteraction")
   }

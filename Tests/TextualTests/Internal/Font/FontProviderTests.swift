@@ -20,12 +20,15 @@ struct FontProviderTests {
       .body.italic().weight(.ultraLight).width(.condensed).leading(.tight),
     ]
   )
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   func roundtrip(font: Font) {
     let resolvedFont = AnyFontProvider(font: font)?.resolve(in: .init())
     #expect(resolvedFont == font)
   }
 
-  @Test func textStyleFontSize() {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func textStyleFontSize() {
     // given
     let font = Font.body.bold().monospaced()
     let fontProvider = AnyFontProvider(font: font)
@@ -44,7 +47,9 @@ struct FontProviderTests {
     #expect(size == expectedSize)
   }
 
-  @Test func textStyleFontScale() {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func textStyleFontScale() {
     // given
     let scale = CGFloat(0.8)
     let font = Font.body.bold().monospaced()
@@ -67,7 +72,9 @@ struct FontProviderTests {
     #expect(size == expectedSize)
   }
 
-  @Test func textStyleFontScaleResolve() {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func textStyleFontScaleResolve() {
     // given
     let scale = CGFloat(0.8)
     let font = Font.body.bold().monospaced()
@@ -95,7 +102,9 @@ struct FontProviderTests {
     #expect(resolvedFont == expectedFont)
   }
 
-  @Test func systemFontScaleResolve() {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func systemFontScaleResolve() {
     // given
     let scale = CGFloat(0.8)
     let font = Font.system(size: 17).bold().monospaced()
@@ -186,7 +195,9 @@ struct FontProviderTests {
     }
   #endif
 
-  @Test func customFontScaleResolve() {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func customFontScaleResolve() {
     // given
     let scale = CGFloat(0.8)
     let font = Font.custom("Helvetica", size: 17, relativeTo: .callout).bold()
@@ -203,7 +214,9 @@ struct FontProviderTests {
     #expect(resolvedFont == expectedFont)
   }
 
-  @Test func customFontFixedSizeScaleResolve() {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func customFontFixedSizeScaleResolve() {
     // given
     let scale = CGFloat(0.8)
     let font = Font.custom("Helvetica", fixedSize: 17).bold()
@@ -220,7 +233,9 @@ struct FontProviderTests {
     #expect(resolvedFont == expectedFont)
   }
 
-  @Test func platformFontScaleResolve() {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func platformFontScaleResolve() {
     // given
     let scale = CGFloat(0.8)
     let font = Font(PlatformFont.systemFont(ofSize: 17)).bold()

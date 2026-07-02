@@ -5,7 +5,9 @@ import Testing
 @testable import Textual
 
 struct HTMLFormatterTests {
-  @Test func simpleParagraph() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func simpleParagraph() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(markdown: "This is a simple paragraph.")
@@ -18,7 +20,9 @@ struct HTMLFormatterTests {
     #expect(result == "<p>This is a simple paragraph.</p>")
   }
 
-  @Test func multipleParagraphs() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func multipleParagraphs() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -44,7 +48,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func headings() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func headings() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -70,7 +76,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func unorderedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func unorderedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -96,7 +104,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func orderedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func orderedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -122,7 +132,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func nestedUnorderedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func nestedUnorderedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -151,7 +163,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func nestedOrderedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func nestedOrderedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -180,7 +194,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func mixedNestedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func mixedNestedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -209,7 +225,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func simpleBlockQuote() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func simpleBlockQuote() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -226,7 +244,9 @@ struct HTMLFormatterTests {
     #expect(result == "<blockquote>\n<p>This is a quote.</p>\n</blockquote>")
   }
 
-  @Test func blockQuoteWithParagraphs() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func blockQuoteWithParagraphs() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -256,7 +276,9 @@ struct HTMLFormatterTests {
 
   // MARK: - Code Blocks
 
-  @Test func codeBlock() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func codeBlock() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -283,7 +305,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func codeBlockWithoutLanguage() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func codeBlockWithoutLanguage() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -303,7 +327,9 @@ struct HTMLFormatterTests {
     #expect(result == "<pre><code>code line 1\ncode line 2\n</code></pre>")
   }
 
-  @Test func codeBlockWithSurroundingText() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func codeBlockWithSurroundingText() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -336,7 +362,9 @@ struct HTMLFormatterTests {
 
   // MARK: - Inline Formatting
 
-  @Test func inlineBold() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func inlineBold() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(markdown: "This is **bold** text.")
@@ -349,7 +377,9 @@ struct HTMLFormatterTests {
     #expect(result == "<p>This is <strong>bold</strong> text.</p>")
   }
 
-  @Test func inlineItalic() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func inlineItalic() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(markdown: "This is *italic* text.")
@@ -362,7 +392,9 @@ struct HTMLFormatterTests {
     #expect(result == "<p>This is <em>italic</em> text.</p>")
   }
 
-  @Test func inlineCode() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func inlineCode() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(markdown: "This is `code` text.")
@@ -375,7 +407,9 @@ struct HTMLFormatterTests {
     #expect(result == "<p>This is <code>code</code> text.</p>")
   }
 
-  @Test func inlineStrikethrough() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func inlineStrikethrough() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(markdown: "This is ~~strikethrough~~ text.")
@@ -388,7 +422,9 @@ struct HTMLFormatterTests {
     #expect(result == "<p>This is <del>strikethrough</del> text.</p>")
   }
 
-  @Test func inlineLink() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func inlineLink() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(markdown: "Visit [example](https://example.com) site.")
@@ -404,7 +440,9 @@ struct HTMLFormatterTests {
     )
   }
 
-  @Test func inlineBoldAndItalic() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func inlineBoldAndItalic() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(markdown: "This is ***bold and italic*** text.")
@@ -417,7 +455,9 @@ struct HTMLFormatterTests {
     #expect(result == "<p>This is <em><strong>bold and italic</strong></em> text.</p>")
   }
 
-  @Test func mixedInlineFormatting() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func mixedInlineFormatting() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -436,7 +476,9 @@ struct HTMLFormatterTests {
 
   // MARK: - Tables
 
-  @Test func simpleTable() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func simpleTable() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -474,7 +516,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func tableWithAlignment() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func tableWithAlignment() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -511,7 +555,9 @@ struct HTMLFormatterTests {
 
   // MARK: - HTML Escaping
 
-  @Test func htmlEscaping() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func htmlEscaping() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -527,7 +573,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func smartQuotesEscaping() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func smartQuotesEscaping() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -543,7 +591,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func linkWithSpecialCharacters() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func linkWithSpecialCharacters() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -561,7 +611,9 @@ struct HTMLFormatterTests {
 
   // MARK: - Complex Mixed Content
 
-  @Test func complexMixedContent() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func complexMixedContent() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -615,7 +667,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func listAfterParagraph() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func listAfterParagraph() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -642,7 +696,9 @@ struct HTMLFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func thematicBreak() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func thematicBreak() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -663,7 +719,9 @@ struct HTMLFormatterTests {
     #expect(result == "<p>First section.</p>\n<hr />\n<p>Second section.</p>")
   }
 
-  @Test func emptyString() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func emptyString() throws {
     // given
     let formatter = Formatter(NSAttributedString())
 

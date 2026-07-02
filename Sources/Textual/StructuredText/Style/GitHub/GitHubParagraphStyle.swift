@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A paragraph style inspired by GitHub’s rendering.
   public struct GitHubParagraphStyle: ParagraphStyle {
@@ -14,6 +15,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.ParagraphStyle where Self == StructuredText.GitHubParagraphStyle {
   /// A GitHub-like paragraph style.
   public static var gitHub: Self {
@@ -21,6 +23,7 @@ extension StructuredText.ParagraphStyle where Self == StructuredText.GitHubParag
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 #Preview {
   StructuredText(
     markdown: """

@@ -2,6 +2,8 @@
   import CoreText
   import SwiftUI
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension Text.Layout {
     struct Contents {
       let lineFragments: [NSTextLineFragment]
@@ -35,6 +37,8 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension Text.Layout.Line {
     var lineFragment: NSTextLineFragment? {
       let mirror = Mirror(reflecting: self)
@@ -47,6 +51,8 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension Text.Layout.Run {
     var characterRanges: [Range<Int>] {
       guard let ctRun else { return [] }
@@ -110,6 +116,8 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension NSAttributedString {
     fileprivate func applyingAttachments(in lines: [Text.Layout.Line]) -> NSAttributedString {
       guard lines.containsAttachments else {
@@ -138,6 +146,8 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension Array where Element == Text.Layout.Line {
     fileprivate var containsAttachments: Bool {
       self.contains { line in

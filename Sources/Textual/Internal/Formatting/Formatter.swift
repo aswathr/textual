@@ -16,6 +16,7 @@ import Foundation
 //
 // The result is a semantic document structure suitable for rendering to various formats.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 final class Formatter {
   lazy var blockNodes: [BlockNode] = makeBlockNodes()
 
@@ -37,6 +38,7 @@ final class Formatter {
 
 // MARK: - Intermediate representation
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter {
   fileprivate func makeBlockNodes() -> [BlockNode] {
     attributedString.blockNodes
@@ -76,6 +78,7 @@ extension Formatter {
 
 // MARK: - Hierarchical representation
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter {
   fileprivate struct Block: Equatable {
     struct Container: Equatable {
@@ -110,6 +113,7 @@ extension Formatter {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter {
   fileprivate struct Segment {
     let components: ArraySlice<PresentationIntent.IntentType>
@@ -145,6 +149,7 @@ extension Formatter {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Sequence where Element == Formatter.Segment {
   fileprivate func groupedByLastComponent() -> [Formatter.SegmentGrouping] {
     var groups: [Formatter.SegmentGrouping] = []
@@ -167,6 +172,7 @@ extension Sequence where Element == Formatter.Segment {
 
 // MARK: - AttributedString segmentation
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributedString {
   private func segments() -> [Formatter.Segment] {
     var segments: [Formatter.Segment] = []
@@ -198,6 +204,7 @@ extension AttributedString {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributedString {
   fileprivate var blocks: [Formatter.Block] {
     self.segments().groupedByLastComponent()
@@ -207,6 +214,7 @@ extension AttributedString {
 
 // MARK: - Block tree building
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.Block {
   fileprivate init(segmentGrouping: Formatter.SegmentGrouping, attributedString: AttributedString) {
     if let segment = segmentGrouping.segments.first, segment.components.isEmpty {
@@ -233,6 +241,7 @@ extension Formatter.Block {
 
 // MARK: - Block tree to BlockNode conversion
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.Block {
   var blockNode: Formatter.BlockNode? {
     switch intentType.kind {
@@ -282,6 +291,7 @@ extension Formatter.Block {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.Block.Container {
   var listItems: [Formatter.ListItem] {
     children.compactMap { block in
@@ -313,6 +323,7 @@ extension Formatter.Block.Container {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.Block.Leaf {
   var inlineNodes: [Formatter.InlineNode] {
     self.attributedString.runs
@@ -321,6 +332,7 @@ extension Formatter.Block.Leaf {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PresentationIntent.Kind {
   fileprivate var isTableRow: Bool {
     switch self {
@@ -334,6 +346,7 @@ extension PresentationIntent.Kind {
 
 // MARK: - InlineNode construction
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.InlineNode {
   fileprivate init(_ attributedString: AttributedSubstring) {
     let intent = attributedString.inlinePresentationIntent ?? []
@@ -374,6 +387,7 @@ extension Formatter.InlineNode {
 
 // MARK: - Highest-level conveniences
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributedString {
   fileprivate var blockNodes: [Formatter.BlockNode] {
     self.blocks.compactMap(\.blockNode)

@@ -5,12 +5,15 @@
 
   import Textual
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension StructuredText {
     @MainActor
     struct CodeBlockTests {
       private let layout = SwiftUISnapshotLayout.device(config: .iPhone8)
 
-      @Test func codeBlock() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func codeBlock() {
         let view = StructuredText(
           markdown: """
             The sky above the port was the color of television, tuned to a dead channel.

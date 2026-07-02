@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.HighlighterTheme {
   /// A minimal theme that applies only base foreground and background colors.
   public static let plain = Self(
@@ -8,6 +9,7 @@ extension StructuredText.HighlighterTheme {
   )
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension DynamicColor {
   static let codePlain = DynamicColor(
     light: Color(red: 0, green: 0, blue: 0, opacity: 0.85),

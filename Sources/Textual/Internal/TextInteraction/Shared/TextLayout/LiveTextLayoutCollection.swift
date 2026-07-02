@@ -1,6 +1,7 @@
 #if TEXTUAL_ENABLE_TEXT_SELECTION
   import SwiftUI
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   final class LiveTextLayoutCollection: TextLayoutCollection {
     private(set) lazy var layouts: [any TextLayout] = makeLayouts()
 
@@ -40,6 +41,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   final class LiveTextLayout: TextLayout {
     var attributedString: NSAttributedString {
       joinedAttributedString.joined
@@ -95,6 +97,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   final class LiveTextLine: TextLine {
     var origin: CGPoint {
       base.origin
@@ -134,6 +137,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   final class LiveTextRun: TextRun {
     var layoutDirection: LayoutDirection {
       base.layoutDirection
@@ -167,6 +171,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   struct EmptyRun: TextRun {
     let layoutDirection: LayoutDirection = .localeBased()
     let typographicBounds: CGRect
@@ -178,6 +183,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   final class LiveTextRunSlice: TextRunSlice {
     var typographicBounds: CGRect {
       base.typographicBounds.rect
@@ -192,6 +198,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   struct EmptyRunSlice: TextRunSlice {
     let typographicBounds: CGRect
     let characterRange: Range<Int>

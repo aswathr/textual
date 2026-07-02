@@ -5,6 +5,7 @@
 
   import Textual
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension StructuredText {
     @MainActor
     struct BlockQuoteTests {
@@ -28,7 +29,9 @@
 
       private let layout = SwiftUISnapshotLayout.device(config: .iPhone8)
 
-      @Test func defaultStyle() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  defaultStyle() {
         let view = StructuredText(
           markdown: """
             > “Well, art is art, isn't it? Still,
@@ -54,7 +57,9 @@
         assertSnapshot(of: view, as: .textualImage(layout: layout))
       }
 
-      @Test func indentationLevel() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  indentationLevel() {
         let view = StructuredText(
           markdown: """
             > “Well, art is art, isn't it? Still,

@@ -200,6 +200,7 @@ StructuredText(markdown: content)
 Here's a practical example, a custom heading style that adds a subtle underline to H1:
 
 ```swift
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct CustomHeadingStyle: StructuredText.HeadingStyle {
   private static let fontScales: [CGFloat] = [2, 1.5, 1.25, 1, 0.875, 0.85]
   
@@ -253,6 +254,7 @@ For full control, implement the `StructuredText.Style` protocol. This lets you d
 cohesive theme:
 
 ```swift
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct CompactStyle: StructuredText.Style {
   var inlineStyle: InlineStyle {
     InlineStyle()

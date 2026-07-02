@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// The default table cell style used by ``StructuredText/DefaultStyle``.
   public struct DefaultTableCellStyle: TableCellStyle {
@@ -15,6 +16,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.TableCellStyle where Self == StructuredText.DefaultTableCellStyle {
   /// The default table cell style.
   public static var `default`: Self {

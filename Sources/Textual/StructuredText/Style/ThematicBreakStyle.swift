@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A style that controls how `StructuredText` renders thematic breaks.
   ///
@@ -15,6 +16,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   @usableFromInline
   @Entry var thematicBreakStyle: any StructuredText.ThematicBreakStyle = .divider

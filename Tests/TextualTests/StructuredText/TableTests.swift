@@ -5,12 +5,15 @@
 
   import Textual
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension StructuredText {
     @MainActor
     struct TableTests {
       private let layout = SwiftUISnapshotLayout.device(config: .iPhone8)
 
-      @Test func table() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  table() {
         let view = StructuredText(
           markdown: """
             The sky above the port was the color of television, tuned to a dead channel.
@@ -28,7 +31,9 @@
         assertSnapshot(of: view, as: .textualImage(layout: layout))
       }
 
-      @Test func tableAlignment() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  tableAlignment() {
         let view = StructuredText(
           markdown: """
             The sky above the port was the color of television, tuned to a dead channel.

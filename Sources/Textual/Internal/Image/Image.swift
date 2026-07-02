@@ -10,6 +10,7 @@ import ImageIO
 // enforce a minimum 100ms delay for any frames specifying ≤10ms (prevents CPU-intensive
 // animations with extremely short frame durations).
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct Image: Hashable, Sendable {
   struct Frame: Hashable, Sendable {
     var cgImage: CGImage
@@ -24,6 +25,7 @@ struct Image: Hashable, Sendable {
   var isAnimated: Bool { frames.count > 1 }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Image {
   init?(data: Data) {
     guard let cgImageSource = CGImageSourceCreateWithData(data as CFData, nil) else {
@@ -94,6 +96,7 @@ extension Image {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CGImageSource {
   fileprivate struct ImageProperty<Value>: Sendable {
     let key: String
@@ -109,12 +112,14 @@ extension CGImageSource {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CFDictionary {
   fileprivate subscript<Value>(_ imageProperty: CGImageSource.ImageProperty<Value>) -> Value? {
     (self as NSDictionary).object(forKey: imageProperty.key) as? Value
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CGImageSource.ImageProperty where Value == CFDictionary {
   fileprivate static let gifDictionary = Self(key: kCGImagePropertyGIFDictionary as String)
   fileprivate static let pngDictionary = Self(key: kCGImagePropertyPNGDictionary as String)
@@ -122,19 +127,23 @@ extension CGImageSource.ImageProperty where Value == CFDictionary {
   fileprivate static let heicsDictionary = Self(key: kCGImagePropertyHEICSDictionary as String)
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CGImageSource.ImageProperty where Value == [CFDictionary] {
   static let frameInfo = Self(key: "FrameInfo")
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CGImageSource.ImageProperty where Value == TimeInterval {
   static let delayTime = Self(key: "DelayTime")
   static let unclampedDelayTime = Self(key: "UnclampedDelayTime")
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CGImageSource.ImageProperty where Value == Int {
   static let loopCount = Self(key: "LoopCount")
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CGImageSource.ImageProperty where Value == CGFloat {
   static let canvasPixelWidth = Self(key: "CanvasPixelWidth")
   static let canvasPixelHeight = Self(key: "CanvasPixelHeight")

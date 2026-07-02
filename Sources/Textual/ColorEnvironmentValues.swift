@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// A small set of environment values used for resolving dynamic colors.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct ColorEnvironmentValues: Hashable, Sendable {
   /// The current color scheme.
   public var colorScheme: ColorScheme
@@ -17,6 +18,7 @@ public struct ColorEnvironmentValues: Hashable, Sendable {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   var colorEnvironment: ColorEnvironmentValues {
     .init(

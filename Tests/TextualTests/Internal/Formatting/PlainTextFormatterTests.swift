@@ -5,7 +5,9 @@ import Testing
 @testable import Textual
 
 struct PlainTextFormatterTests {
-  @Test func simpleParagraph() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func simpleParagraph() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(markdown: "This is a simple paragraph.")
@@ -18,7 +20,9 @@ struct PlainTextFormatterTests {
     #expect(result == "This is a simple paragraph.")
   }
 
-  @Test func multipleParagraphs() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func multipleParagraphs() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -39,7 +43,9 @@ struct PlainTextFormatterTests {
     #expect(result == "First paragraph.\n\nSecond paragraph.\n\nThird paragraph.")
   }
 
-  @Test func headings() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func headings() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -60,7 +66,9 @@ struct PlainTextFormatterTests {
     #expect(result == "Heading 1\n\nHeading 2\n\nHeading 3")
   }
 
-  @Test func unorderedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func unorderedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -79,7 +87,9 @@ struct PlainTextFormatterTests {
     #expect(result == "  • First item\n  • Second item\n  • Third item")
   }
 
-  @Test func orderedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func orderedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -98,7 +108,9 @@ struct PlainTextFormatterTests {
     #expect(result == "  1. First item\n  2. Second item\n  3. Third item")
   }
 
-  @Test func nestedUnorderedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func nestedUnorderedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -121,7 +133,9 @@ struct PlainTextFormatterTests {
     )
   }
 
-  @Test func nestedOrderedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func nestedOrderedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -144,7 +158,9 @@ struct PlainTextFormatterTests {
     )
   }
 
-  @Test func mixedNestedList() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func mixedNestedList() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -167,7 +183,9 @@ struct PlainTextFormatterTests {
     )
   }
 
-  @Test func simpleBlockQuote() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func simpleBlockQuote() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -184,7 +202,9 @@ struct PlainTextFormatterTests {
     #expect(result == "  This is a quote.")
   }
 
-  @Test func blockQuoteWithParagraphs() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func blockQuoteWithParagraphs() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -207,7 +227,9 @@ struct PlainTextFormatterTests {
 
   // MARK: - Code Blocks
 
-  @Test func codeBlock() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func codeBlock() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -228,7 +250,9 @@ struct PlainTextFormatterTests {
     #expect(result == "func hello() {\n    print(\"Hello\")\n}\n")
   }
 
-  @Test func codeBlockWithSurroundingText() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func codeBlockWithSurroundingText() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -252,7 +276,9 @@ struct PlainTextFormatterTests {
     #expect(result == "Before code.\n\ncode line 1\ncode line 2\n\n\nAfter code.")
   }
 
-  @Test func simpleTable() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func simpleTable() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -277,7 +303,9 @@ struct PlainTextFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func complexMixedContent() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func complexMixedContent() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -336,7 +364,9 @@ struct PlainTextFormatterTests {
     #expect(result == expected)
   }
 
-  @Test func listAfterParagraph() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func listAfterParagraph() throws {
     // given
     let formatter = try Formatter(
       NSAttributedString(
@@ -356,7 +386,9 @@ struct PlainTextFormatterTests {
     #expect(result == "Here is a paragraph.\n\n  • Item 1\n  • Item 2")
   }
 
-  @Test func emptyString() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func emptyString() throws {
     // given
     let formatter = Formatter(NSAttributedString())
 

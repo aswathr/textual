@@ -9,6 +9,7 @@ import SwiftUI
 // coordinates, and looks for the first run whose typographic bounds contains the tap. When a run
 // has a `url`, the modifier invokes the environment’s `openURL` action.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct TextLinkInteraction: ViewModifier {
   @Environment(\.openURL) private var openURL
 

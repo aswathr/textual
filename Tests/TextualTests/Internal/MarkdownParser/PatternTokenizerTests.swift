@@ -4,7 +4,9 @@ import Testing
 @testable import Textual
 
 struct PatternTokenizerTests {
-  @Test func text() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func text() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.emoji])
 
@@ -19,7 +21,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func emoji() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func emoji() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.emoji])
 
@@ -38,7 +42,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func adjacentEmoji() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func adjacentEmoji() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.emoji])
 
@@ -56,7 +62,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func incompleteEmoji() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func incompleteEmoji() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.emoji])
 
@@ -71,7 +79,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func emptyEmoji() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func emptyEmoji() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.emoji])
 
@@ -86,7 +96,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func invalidEmoji() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func invalidEmoji() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.emoji])
 
@@ -101,7 +113,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func preservesNewlines() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func preservesNewlines() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.emoji])
 
@@ -126,7 +140,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func inlineMath() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func inlineMath() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.mathBlock, .mathInline])
 
@@ -143,7 +159,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func inlineMathEscapedDollar() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func inlineMathEscapedDollar() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.mathBlock, .mathInline])
 
@@ -159,7 +177,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func blockMath() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func blockMath() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.mathBlock, .mathInline])
 
@@ -182,7 +202,9 @@ struct PatternTokenizerTests {
     )
   }
 
-  @Test func blockMathPreferredOverInline() throws {
+  @Test
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  func blockMathPreferredOverInline() throws {
     // given
     let tokenizer = PatternTokenizer(patterns: [.mathBlock, .mathInline])
 

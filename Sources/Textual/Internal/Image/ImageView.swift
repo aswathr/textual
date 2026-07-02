@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct ImageView: View {
   private let content: Image
 
@@ -19,6 +20,7 @@ struct ImageView: View {
 
 // MARK: - AnimatedImageView
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 private struct AnimatedImageView: View {
   @State private var clock: AnimationClock
 
@@ -51,6 +53,7 @@ private struct AnimatedImageView: View {
 // loopCount semantics: 0 means infinite looping, >0 means loop that many times then freeze
 // on the last frame.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 private struct AnimationClock: Sendable {
   private let referenceDate: Date
   private let schedule: Schedule
@@ -83,6 +86,7 @@ private struct AnimationClock: Sendable {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AnimationClock {
   private struct Schedule: Sendable {
     var numberOfFrames: Int {
@@ -125,6 +129,7 @@ extension AnimationClock {
 
 // MARK: - Preview
 
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview("JPEG") {
   @Previewable @State var image: Image?
 
@@ -144,6 +149,7 @@ extension AnimationClock {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview("GIF") {
   @Previewable @State var image: Image?
 
@@ -166,6 +172,7 @@ extension AnimationClock {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview("APNG") {
   @Previewable @State var image: Image?
 
@@ -188,6 +195,7 @@ extension AnimationClock {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview("webP") {
   @Previewable @State var image: Image?
 
@@ -207,6 +215,7 @@ extension AnimationClock {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview("HEIC") {
   @Previewable @State var image: Image?
 

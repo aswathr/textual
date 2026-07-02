@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// The properties of an unordered-list marker passed to an `UnorderedListMarker`.
   public struct UnorderedListMarkerConfiguration {
@@ -21,6 +22,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   @usableFromInline
   @Entry var unorderedListMarker: any StructuredText.UnorderedListMarker = .disc
@@ -28,6 +30,7 @@ extension EnvironmentValues {
 
 // MARK: - Symbol
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A list marker that uses an SF Symbol.
   public struct SymbolListMarker: UnorderedListMarker {
@@ -59,6 +62,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.UnorderedListMarker where Self == StructuredText.SymbolListMarker {
   /// A filled-circle marker.
   public static var disc: Self {
@@ -78,6 +82,7 @@ extension StructuredText.UnorderedListMarker where Self == StructuredText.Symbol
 
 // MARK: - Hierarchical
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A marker that cycles through a list of symbol markers based on indentation level.
   public struct HierarchicalSymbolListMarker: UnorderedListMarker {
@@ -99,6 +104,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.UnorderedListMarker
 where Self == StructuredText.HierarchicalSymbolListMarker {
   /// Creates a hierarchical marker from a variadic list of markers.
@@ -109,6 +115,7 @@ where Self == StructuredText.HierarchicalSymbolListMarker {
 
 // MARK: - Dash
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A list marker that renders a dash (`-`).
   public struct DashListMarker: UnorderedListMarker {
@@ -128,6 +135,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.UnorderedListMarker where Self == StructuredText.DashListMarker {
   /// The default dash marker.
   public static var dash: Self {

@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A heading style inspired by GitHub’s rendering.
   public struct GitHubHeadingStyle: HeadingStyle {
@@ -36,6 +37,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.HeadingStyle where Self == StructuredText.GitHubHeadingStyle {
   /// A GitHub-like heading style.
   public static var gitHub: Self {
@@ -43,6 +45,7 @@ extension StructuredText.HeadingStyle where Self == StructuredText.GitHubHeading
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 #Preview {
   ScrollView {
     StructuredText(

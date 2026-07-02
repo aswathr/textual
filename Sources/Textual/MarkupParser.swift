@@ -29,6 +29,7 @@ import Foundation
 /// Textual groups content into blocks by walking `PresentationIntent` changes across runs, so
 /// missing or inconsistent intents will typically show up as incorrect block rendering.
 @MainActor
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public protocol MarkupParser {
   /// Returns attributed content for the given input string.
   ///

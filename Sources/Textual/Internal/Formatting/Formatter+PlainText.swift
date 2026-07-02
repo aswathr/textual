@@ -1,5 +1,6 @@
 import Foundation
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter {
   func plainText() -> String {
     blockNodes.renderPlainText()
@@ -8,6 +9,7 @@ extension Formatter {
 
 // MARK: - Inline rendering
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.InlineNode {
   fileprivate func renderPlainText() -> String {
     switch self {
@@ -31,6 +33,7 @@ extension Formatter.InlineNode {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == Formatter.InlineNode {
   fileprivate func renderPlainText() -> String {
     self.map {
@@ -41,6 +44,7 @@ extension Array where Element == Formatter.InlineNode {
 
 // MARK: - Block rendering
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.BlockNode {
   fileprivate func renderPlainText(indentationLevel: Int, tightSpacing: Bool) -> String {
     switch self {
@@ -65,6 +69,7 @@ extension Formatter.BlockNode {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == Formatter.BlockNode {
   fileprivate func renderPlainText(indentationLevel: Int = 0, tightSpacing: Bool = false)
     -> String
@@ -77,6 +82,7 @@ extension Array where Element == Formatter.BlockNode {
 
 // MARK: - Table rendering
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.TableRow {
   fileprivate func renderPlainText(indentationLevel: Int = 0) -> String {
     cells.map {
@@ -87,6 +93,7 @@ extension Formatter.TableRow {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == Formatter.TableRow {
   fileprivate func renderPlainText(indentationLevel: Int = 0) -> String {
     self.map {
@@ -97,6 +104,7 @@ extension Array where Element == Formatter.TableRow {
 
 // MARK: - List rendering
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.ListItem {
   fileprivate func renderOrderedPlainText(indentationLevel: Int) -> String {
     blocks
@@ -111,6 +119,7 @@ extension Formatter.ListItem {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == Formatter.ListItem {
   fileprivate func renderOrderedPlainText(indentationLevel: Int) -> String {
     self.map {
@@ -125,6 +134,7 @@ extension Array where Element == Formatter.ListItem {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension String {
   fileprivate func indented(_ level: Int) -> String {
     guard level > 0 else { return self }

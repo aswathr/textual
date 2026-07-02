@@ -25,6 +25,7 @@ import SwiftUI
 // TextFragment is used by InlineText and StructuredText (via BlockContent) to render
 // attributed content with inline attachments, links, and selection.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct TextFragment<Content: AttributedStringProtocol>: View {
   @Environment(\.textEnvironment) private var textEnvironment
   @State private var textBuilder: TextBuilder?
@@ -55,21 +56,25 @@ struct TextFragment<Content: AttributedStringProtocol>: View {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct TextFragmentAttribute: TextAttribute {
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Text.Layout {
   var isTextFragment: Bool {
     first?.first?[TextFragmentAttribute.self] != nil
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CoordinateSpaceProtocol where Self == NamedCoordinateSpace {
   static var textContainer: NamedCoordinateSpace {
     .named("textContainer")
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension GeometryProxy {
   fileprivate var textContainerSize: CGSize? {
     bounds(of: .textContainer)?.size

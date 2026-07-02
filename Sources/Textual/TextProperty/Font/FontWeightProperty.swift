@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Applies a font weight.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct FontWeightProperty: TextProperty {
   private let weight: Font.Weight
 
@@ -15,6 +16,7 @@ public struct FontWeightProperty: TextProperty {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension TextProperty where Self == FontWeightProperty {
   /// Applies the given weight to the font.
   public static func fontWeight(_ weight: Font.Weight) -> Self {

@@ -1,6 +1,7 @@
 import Foundation
 import os
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Logger {
   enum Textual {
     struct Category: RawRepresentable, Hashable {
@@ -26,12 +27,14 @@ extension Logger {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CGPoint {
   var logDescription: String {
     "(\(String(format: "%.1f", x)), \(String(format: "%.1f", y)))"
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension CGRect {
   var logDescription: String {
     "(" + "\(String(format: "%.1f", origin.x)), " + "\(String(format: "%.1f", origin.y)), "
@@ -39,12 +42,14 @@ extension CGRect {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension NSAttributedString {
   var logDescription: String {
     self.string.replacingOccurrences(of: "\n", with: "\\n")
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Optional where Wrapped: CustomStringConvertible {
   var logDescription: String {
     self?.description ?? "nil"

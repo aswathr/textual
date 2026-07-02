@@ -12,6 +12,7 @@ import SwiftUI
 // writes the resolved attachments back into the attributed string as `Textual.Attachment`
 // attributes. The rest of the rendering pipeline treats attachment runs like any other span.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct WithAttachments<Content: View>: View {
   @Environment(\.imageAttachmentLoader) private var imageAttachmentLoader
   @Environment(\.emojiAttachmentLoader) private var emojiAttachmentLoader
@@ -43,6 +44,7 @@ struct WithAttachments<Content: View>: View {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension WithAttachments {
   @MainActor @Observable final class Model {
     var resolvedAttributedString: AttributedString?

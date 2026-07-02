@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A table cell style inspired by GitHub’s rendering.
   public struct GitHubTableCellStyle: TableCellStyle {
@@ -16,6 +17,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.TableCellStyle where Self == StructuredText.GitHubTableCellStyle {
   /// A GitHub-like table cell style.
   public static var gitHub: Self {

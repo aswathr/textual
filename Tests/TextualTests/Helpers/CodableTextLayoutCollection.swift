@@ -23,12 +23,14 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension CodableTextLayoutCollection {
     init(_ base: any TextLayoutCollection) {
       self.init(_layouts: base.layouts.map(CodableTextLayout.init))
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension CodableTextLayoutCollection: Codable {
     init(from decoder: any Decoder) throws {
       let container = try decoder.singleValueContainer()
@@ -52,6 +54,7 @@
     let _lines: [CodableTextLine]
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension CodableTextLayout {
     init(_ base: any TextLayout) {
       self.init(
@@ -63,6 +66,7 @@
     }
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension CodableTextLayout: Codable {
     private enum CodingKeys: String, CodingKey {
       case attributedString, origin, bounds, lines
@@ -102,6 +106,7 @@
     let _runs: [CodableTextRun]
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension CodableTextLine {
     init(_ base: any TextLine) {
       self.init(
@@ -132,6 +137,7 @@
     let _slices: [CodableTextRunSlice]
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension CodableTextRun {
     init(_ base: any TextRun) {
       self.init(
@@ -148,6 +154,7 @@
     let characterRange: Range<Int>
   }
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension CodableTextRunSlice {
     init(_ base: any TextRunSlice) {
       self.init(

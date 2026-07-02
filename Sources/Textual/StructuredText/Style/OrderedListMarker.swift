@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// The properties of an ordered-list marker passed to an `OrderedListMarker`.
   public struct OrderedListMarkerConfiguration {
@@ -23,6 +24,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   @usableFromInline
   @Entry var orderedListMarker: any StructuredText.OrderedListMarker = .decimal
@@ -30,6 +32,7 @@ extension EnvironmentValues {
 
 // MARK: - Decimal
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A list marker that displays an item’s ordinal as a decimal number.
   public struct DecimalListMarker: OrderedListMarker {
@@ -51,6 +54,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.OrderedListMarker where Self == StructuredText.DecimalListMarker {
   /// The default decimal ordered-list marker.
   public static var decimal: Self {
@@ -60,6 +64,7 @@ extension StructuredText.OrderedListMarker where Self == StructuredText.DecimalL
 
 // MARK: - Ordinal mappings
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// A list marker that formats the item ordinal using a custom string transform.
   public struct MapOrdinalListMarker: OrderedListMarker {
@@ -85,6 +90,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.OrderedListMarker where Self == StructuredText.MapOrdinalListMarker {
   /// An ordered-list marker that uses uppercase Roman numerals.
   public static var upperRoman: Self {
@@ -109,6 +115,7 @@ extension StructuredText.OrderedListMarker where Self == StructuredText.MapOrdin
 
 // MARK: - Helpers
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Int {
   fileprivate var lowerAlpha: String {
     guard self > 0, self <= 26 else {

@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Determines how text selection affects an attachment.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public enum AttachmentSelectionStyle: Sendable {
   /// Treats the attachment as inline text.
   ///
@@ -19,6 +20,7 @@ public enum AttachmentSelectionStyle: Sendable {
 ///
 /// Attachments are resolved from markup and rendered inline by Textual. Use attachments to
 /// display images, custom emoji, or other inline views that should participate in text layout.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public protocol Attachment: Sendable, Hashable, CustomStringConvertible {
   associatedtype Body: View
 
@@ -45,6 +47,7 @@ public protocol Attachment: Sendable, Hashable, CustomStringConvertible {
   func pngData() -> Data?
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Attachment {
   public var selectionStyle: AttachmentSelectionStyle {
     .object
@@ -62,6 +65,7 @@ extension Attachment {
 /// A type-erased ``Attachment``.
 ///
 /// Textual uses `AnyAttachment` to store heterogeneous attachments in attributed content.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct AnyAttachment: Attachment {
   let base: any Attachment
 

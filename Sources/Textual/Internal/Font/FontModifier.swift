@@ -5,12 +5,14 @@ protocol FontModifier: Sendable, Hashable {
   func modify(_ size: inout CGFloat)
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension FontModifier {
   func modify(_ size: inout CGFloat) {
     // do nothing
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct WeightFontModifier: FontModifier {
   var weight: Font.Weight
 
@@ -19,6 +21,7 @@ struct WeightFontModifier: FontModifier {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct WidthFontModifier: FontModifier {
   var width: Font.Width
 
@@ -27,6 +30,7 @@ struct WidthFontModifier: FontModifier {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct LeadingFontModifier: FontModifier {
   var leading: Font.Leading
 
@@ -58,36 +62,42 @@ protocol StaticFontModifier: FontModifier {
   init()
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct BoldFontModifier: StaticFontModifier {
   func modify(_ font: inout Font) {
     font = font.bold()
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct ItalicFontModifier: StaticFontModifier {
   func modify(_ font: inout Font) {
     font = font.italic()
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct MonospacedFontModifier: StaticFontModifier {
   func modify(_ font: inout Font) {
     font = font.monospaced()
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct MonospacedDigitFontModifier: StaticFontModifier {
   func modify(_ font: inout Font) {
     font = font.monospacedDigit()
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct LowercaseSmallCapsFontModifier: StaticFontModifier {
   func modify(_ font: inout Font) {
     font = font.lowercaseSmallCaps()
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct UppercaseSmallCapsFontModifier: StaticFontModifier {
   func modify(_ font: inout Font) {
     font = font.uppercaseSmallCaps()

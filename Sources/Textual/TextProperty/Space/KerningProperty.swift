@@ -1,6 +1,7 @@
 import Foundation
 
 /// Sets a kern value attribute.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct KerningProperty: TextProperty {
   private let kerning: CGFloat
 
@@ -17,6 +18,7 @@ public struct KerningProperty: TextProperty {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension TextProperty where Self == KerningProperty {
   /// Sets the kern value.
   public static func kerning(_ kerning: CGFloat) -> Self {

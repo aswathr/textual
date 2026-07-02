@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Controls how content behaves when it overflows horizontally.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public enum OverflowMode: Hashable {
   /// Wraps content to fit the available width.
   case wrap
@@ -9,6 +10,7 @@ public enum OverflowMode: Hashable {
 }
 
 /// Describes the current overflow behavior and available layout metrics.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public enum OverflowState: Hashable {
   /// Wraps content to fit the available width.
   case wrap
@@ -34,6 +36,7 @@ public enum OverflowState: Hashable {
 ///
 /// - Note: You should always use `Overflow` if your custom style needs horizontal scrolling.
 ///   Using a horizontal `ScrollView` directly will interfere with text selection gestures.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct Overflow<Content: View>: View {
   @Environment(\.overflowMode) private var mode
   @State private var containerWidth: CGFloat?
@@ -93,6 +96,7 @@ public struct Overflow<Content: View>: View {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   @usableFromInline
   @Entry var overflowMode = OverflowMode.scroll

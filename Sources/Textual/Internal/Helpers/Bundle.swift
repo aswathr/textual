@@ -2,6 +2,7 @@ import Foundation
 
 private class Token {}
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Bundle {
   // NB: Alternative to `Bundle.module` that does not crash when the bundle is not found
   static let textual: Bundle? = {

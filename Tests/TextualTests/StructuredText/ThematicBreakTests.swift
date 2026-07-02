@@ -5,12 +5,15 @@
 
   import Textual
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension StructuredText {
     @MainActor
     struct ThematicBreakTests {
       private let layout = SwiftUISnapshotLayout.device(config: .iPhone8)
 
-      @Test func defaultStyle() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  defaultStyle() {
         let view = StructuredText(
           markdown: """
             # SwiftUI

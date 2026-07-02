@@ -5,12 +5,15 @@
 
   import Textual
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension StructuredText {
     @MainActor
     struct UnorderedListTests {
       private let layout = SwiftUISnapshotLayout.device(config: .iPhone8)
 
-      @Test func hiearchicalSymbolList() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  hiearchicalSymbolList() {
         let view = StructuredText(
           markdown: """
             * Systems
@@ -28,7 +31,9 @@
         assertSnapshot(of: view, as: .textualImage(layout: layout))
       }
 
-      @Test func dashList() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  dashList() {
         let view = StructuredText(
           markdown: """
             * Systems

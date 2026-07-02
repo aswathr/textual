@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// Additional spacing to apply above and below a block element.
   ///
@@ -28,6 +29,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.BlockSpacing: FontScalable {
   public func scaled(by fontSize: CGFloat) -> StructuredText.BlockSpacing {
     .init(
@@ -37,6 +39,7 @@ extension StructuredText.BlockSpacing: FontScalable {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension FontScaled where Value == StructuredText.BlockSpacing {
   /// A convenience constructor for font-scaled `StructuredText.BlockSpacing` values.
   public static func fontScaled(top: CGFloat? = nil, bottom: CGFloat? = nil) -> Self {

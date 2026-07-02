@@ -4,6 +4,7 @@ import SwiftUI
 ///
 /// Textual passes `TextEnvironmentValues` to APIs that need to resolve styling or sizing based on
 /// the current environment, such as ``TextProperty`` and ``Attachment``.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct TextEnvironmentValues: Hashable, Sendable {
   /// The current font in the environment.
   public var font: Font?
@@ -53,6 +54,7 @@ public struct TextEnvironmentValues: Hashable, Sendable {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   var textEnvironment: TextEnvironmentValues {
     .init(

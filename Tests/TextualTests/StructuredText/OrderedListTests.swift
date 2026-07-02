@@ -5,12 +5,15 @@
 
   import Textual
 
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension StructuredText {
     @MainActor
     struct OrderedListTests {
       private let layout = SwiftUISnapshotLayout.device(config: .iPhone8)
 
-      @Test func decimalList() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  decimalList() {
         let view = StructuredText(
           markdown: """
             This is an incomplete list of headgear:
@@ -40,7 +43,9 @@
         assertSnapshot(of: view, as: .image(precision: 0.85, layout: layout))
       }
 
-      @Test func lowerRomanList() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  lowerRomanList() {
         let view = StructuredText(
           markdown: """
             This is an incomplete list of headgear:
@@ -62,7 +67,9 @@
         assertSnapshot(of: view, as: .textualImage(layout: layout))
       }
 
-      @Test func upperRomanList() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  upperRomanList() {
         let view = StructuredText(
           markdown: """
             This is an incomplete list of headgear:
@@ -84,7 +91,9 @@
         assertSnapshot(of: view, as: .textualImage(layout: layout))
       }
 
-      @Test func lowerAlphaList() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  lowerAlphaList() {
         let view = StructuredText(
           markdown: """
             This is an incomplete list of headgear:
@@ -106,7 +115,9 @@
         assertSnapshot(of: view, as: .textualImage(layout: layout))
       }
 
-      @Test func upperAlphaList() {
+      @Test
+      @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+      func  upperAlphaList() {
         let view = StructuredText(
           markdown: """
             This is an incomplete list of headgear:

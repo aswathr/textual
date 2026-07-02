@@ -8,6 +8,7 @@ import SwiftUI
 /// Values are font-relative, so they scale with the current font size.
 ///
 /// You can set these properties using the ``TextualNamespace/emojiProperties(_:)`` modifier.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct EmojiProperties: Sendable, Hashable {
   /// The emoji size, expressed as a font-relative value.
   public var size: FontScaled<CGSize>
@@ -25,6 +26,7 @@ public struct EmojiProperties: Sendable, Hashable {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension EnvironmentValues {
   @Entry var emojiProperties = EmojiProperties()
 }

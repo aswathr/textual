@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// The default block quote style used by ``StructuredText/DefaultStyle``.
   public struct DefaultBlockQuoteStyle: BlockQuoteStyle {
@@ -31,6 +32,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.BlockQuoteStyle where Self == StructuredText.DefaultBlockQuoteStyle {
   /// The default block quote style.
   public static var `default`: Self {
@@ -40,6 +42,7 @@ extension StructuredText.BlockQuoteStyle where Self == StructuredText.DefaultBlo
 
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview {
   StructuredText(
     markdown: """

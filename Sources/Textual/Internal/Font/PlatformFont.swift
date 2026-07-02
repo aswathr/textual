@@ -15,6 +15,7 @@ import SwiftUI
   typealias FontDescriptor = UIFontDescriptor
 #endif
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension FontDescriptor {
   static func preferredFontDescriptor(
     withTextStyle style: Font.TextStyle,
@@ -38,6 +39,7 @@ extension FontDescriptor {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PlatformFont.TextStyle {
   init(_ textStyle: Font.TextStyle) {
     switch textStyle {
@@ -80,6 +82,8 @@ extension PlatformFont.TextStyle {
 }
 
 #if canImport(UIKit)
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension PlatformFont {
     static func custom(
       _ name: String,

@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   /// The default list item style used by ``StructuredText/DefaultStyle``.
   public struct DefaultListItemStyle: ListItemStyle {
@@ -23,6 +24,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText.ListItemStyle where Self == StructuredText.DefaultListItemStyle {
   /// The default list item style.
   public static var `default`: Self {
@@ -39,6 +41,7 @@ extension StructuredText.ListItemStyle where Self == StructuredText.DefaultListI
 
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview("OrderedList") {
   StructuredText(
     markdown: """
@@ -68,6 +71,7 @@ extension StructuredText.ListItemStyle where Self == StructuredText.DefaultListI
 
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview("UnorderedList") {
   StructuredText(
     markdown: """

@@ -11,6 +11,7 @@ import SwiftUI
 // or iOS. This separation keeps model management in shared code while platform interactions
 // remain independent.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct TextSelectionInteraction: ViewModifier {
   #if TEXTUAL_ENABLE_TEXT_SELECTION
     @Environment(\.textSelection) private var textSelection
@@ -41,6 +42,7 @@ struct TextSelectionInteraction: ViewModifier {
 }
 
 #if TEXTUAL_ENABLE_TEXT_SELECTION
+  @available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
   extension EnvironmentValues {
     @available(tvOS, unavailable)
     @available(watchOS, unavailable)

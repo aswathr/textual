@@ -10,6 +10,7 @@ import Foundation
 // request checks the cache first, then ongoing tasks, and only creates a new task if neither
 // exists. Tasks are removed from the ongoing dictionary via defer after completion or failure.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 actor ImageLoader {
   static let shared = ImageLoader()
 
@@ -73,6 +74,7 @@ actor ImageLoader {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension URLSessionConfiguration {
   fileprivate static var imageLoading: URLSessionConfiguration {
     let configuration = Self.default

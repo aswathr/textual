@@ -11,6 +11,7 @@ import Foundation
 //
 // Syntax extensions are opt-in; when no extensions are provided, the input is returned unchanged.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributedStringMarkdownParser {
   struct PatternProcessor {
     private let syntaxExtensions: [SyntaxExtension]
@@ -58,6 +59,7 @@ extension AttributedStringMarkdownParser {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == AttributedStringMarkdownParser.SyntaxExtension {
   func firstMatching(_ tokenType: PatternTokenizer.TokenType) -> Element? {
     guard tokenType != .text else {
@@ -69,6 +71,7 @@ extension Array where Element == AttributedStringMarkdownParser.SyntaxExtension 
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension AttributedString.Runs.Run {
   fileprivate var isPreformatted: Bool {
     if self.inlinePresentationIntent?.isPreformatted ?? false {
@@ -83,18 +86,21 @@ extension AttributedString.Runs.Run {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension InlinePresentationIntent {
   fileprivate var isPreformatted: Bool {
     contains(.code) || contains(.inlineHTML) || contains(.blockHTML)
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PresentationIntent {
   fileprivate var isPreformatted: Bool {
     components.first?.kind.isPreformatted ?? false
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension PresentationIntent.Kind {
   fileprivate var isPreformatted: Bool {
     switch self {

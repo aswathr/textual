@@ -12,6 +12,7 @@ import SwiftUI
 // Font.Weight has no public API to extract the CGFloat value needed for font descriptor traits,
 // so we use reflection via Mirror.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct TextStyleFontProvider {
   var style: Font.TextStyle
   var design: Font.Design?
@@ -19,6 +20,7 @@ struct TextStyleFontProvider {
   var scale: CGFloat = 1
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension TextStyleFontProvider: FontProvider {
   func size(in environment: TextEnvironmentValues) -> CGFloat {
     FontDescriptor.preferredFontDescriptor(
@@ -51,12 +53,14 @@ extension TextStyleFontProvider: FontProvider {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Font.Weight {
   fileprivate var value: CGFloat? {
     Mirror(reflecting: self).descendant("value") as? CGFloat
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension FontDescriptor.SystemDesign {
   fileprivate init(_ design: Font.Design) {
     switch design {

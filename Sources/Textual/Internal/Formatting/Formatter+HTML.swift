@@ -1,5 +1,6 @@
 import Foundation
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter {
   func html() -> String {
     blockNodes.renderHTML()
@@ -8,6 +9,7 @@ extension Formatter {
 
 // MARK: - Inline rendering
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.InlineNode {
   fileprivate func renderHTML() -> String {
     switch self {
@@ -36,6 +38,7 @@ extension Formatter.InlineNode {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == Formatter.InlineNode {
   fileprivate func renderHTML() -> String {
     self.map {
@@ -46,6 +49,7 @@ extension Array where Element == Formatter.InlineNode {
 
 // MARK: - Block rendering
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.BlockNode {
   fileprivate func renderHTML() -> String {
     switch self {
@@ -87,6 +91,7 @@ extension Formatter.BlockNode {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == Formatter.BlockNode {
   fileprivate func renderHTML() -> String {
     self.map {
@@ -97,6 +102,7 @@ extension Array where Element == Formatter.BlockNode {
 
 // MARK: - Table rendering
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.TableRow {
   fileprivate func renderHeaderHTML(columns: [PresentationIntent.TableColumn]) -> String {
     renderHTML("th", columns: columns)
@@ -118,6 +124,7 @@ extension Formatter.TableRow {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == Formatter.TableRow {
   fileprivate func renderHTML(columns: [PresentationIntent.TableColumn]) -> String {
     self.map {
@@ -128,6 +135,7 @@ extension Array where Element == Formatter.TableRow {
 
 // MARK: - List rendering
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Formatter.ListItem {
   fileprivate func renderHTML() -> String {
     // NB: Tight vs. loose list detection. When Markdown has blank lines between list items,
@@ -166,6 +174,7 @@ extension Formatter.ListItem {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Array where Element == Formatter.ListItem {
   fileprivate func renderHTML() -> String {
     self.map {
@@ -176,6 +185,7 @@ extension Array where Element == Formatter.ListItem {
 
 // MARK: - String escaping
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension String {
   // For text content. Escapes &, <, >, and non-ASCII characters.
   fileprivate func htmlEscaped() -> String {

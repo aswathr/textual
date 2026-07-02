@@ -9,6 +9,7 @@ import SwiftUI
 // List items can override block spacing with environment-driven list item spacing for consistent
 // spacing within lists regardless of individual block preferences.
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   struct BlockVStack<Content: View>: View {
     @Environment(\.multilineTextAlignment) private var textAlignment
@@ -31,6 +32,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   struct BlockAlignmentKey: LayoutValueKey {
     static let defaultValue: TextAlignment? = nil
@@ -141,6 +143,7 @@ extension StructuredText {
 
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+@available(macOS 15.0, iOS 18.0, visionOS 2.0, *)
 #Preview {
   @Previewable @State var textAlignment = TextAlignment.leading
   @Previewable @State var blockSpacing: CGFloat = 1

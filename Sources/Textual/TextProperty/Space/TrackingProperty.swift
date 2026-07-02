@@ -1,6 +1,7 @@
 import Foundation
 
 /// Sets a tracking value attribute.
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 public struct TrackingProperty: TextProperty {
   private let tracking: CGFloat
 
@@ -17,6 +18,7 @@ public struct TrackingProperty: TextProperty {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension TextProperty where Self == TrackingProperty {
   /// Sets the tracking value.
   public static func tracking(_ tracking: CGFloat) -> Self {

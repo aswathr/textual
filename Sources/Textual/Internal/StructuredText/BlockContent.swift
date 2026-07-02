@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   struct BlockContent<Content: AttributedStringProtocol>: View {
     private let parent: PresentationIntent.IntentType?
@@ -23,6 +24,7 @@ extension StructuredText {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension StructuredText {
   struct Block: View {
     private let intent: PresentationIntent.IntentType?

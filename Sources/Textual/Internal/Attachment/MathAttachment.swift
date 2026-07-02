@@ -1,6 +1,7 @@
 import SwiftUI
 @_spi(Textual) private import SwiftUIMath
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 struct MathAttachment: Attachment {
   enum DisplayStyle: Sendable {
     case inline
@@ -56,6 +57,7 @@ struct MathAttachment: Attachment {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 private struct MathView: View {
   @Environment(\.textEnvironment) private var environment
 
@@ -75,12 +77,14 @@ private struct MathView: View {
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Math.Font.Name {
   fileprivate init(_ fontName: MathProperties.FontName) {
     self.init(rawValue: fontName.rawValue)
   }
 }
 
+@available(macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 extension Math.TypesettingStyle {
   fileprivate init(_ style: MathAttachment.DisplayStyle) {
     switch style {
